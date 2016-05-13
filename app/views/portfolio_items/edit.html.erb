@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h1>Editing Portfolio Item</h1>
+          <%= image_tag @portfolio_item.image, class: 'img-rounded', width: '100%', alt: @portfolio_item.caption, title: @portfolio_item.caption %>
+
+          <%= render 'form' %>
+
+          <%= link_to 'Show', @portfolio_item %> |
+          <%= link_to 'Back', portfolio_items_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

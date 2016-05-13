@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>My Portfolio</h1>
+  <p>Behold the talent before you!</p>
+
+  <%= link_to "Add Portfolio Item", new_portfolio_item_path, class: 'btn btn-success', style: '' %>
+  <tbody>
+    <% @portfolio_items.each do |portfolio_item| %>
+      <div class="col-md-6 col-md-offset-3">
+        <td><%= image_tag portfolio_item.image, class: 'img-rounded', width: '40%', alt: portfolio_item.caption, title: portfolio_item.caption %></td>
+      </div>
+      <div class="col-md-6 col-md-offset-3">
+        <td><%= portfolio_item.caption %></td>
+      </div>
+      <div class="col-md-6 col-md-offset-3">
+        <td><%= portfolio_item.description %></td>
+      </div>
+      <div class="col-md-6 col-md-offset-3">
+        <td><%= link_to "View", portfolio_item_path(portfolio_item) %></td>
+      </div>
+    <% end %>
+  </tbody>
+
+</div>
